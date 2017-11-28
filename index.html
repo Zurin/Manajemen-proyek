@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bulma.css">
+  </head>
+  <body>
+    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <!-- <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28"> -->
+          JUDUL
+        </a>
+        <div class="navbar-burger burger" data-target="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-start">
+            <a class="navbar-item is-active" href="index.html">
+              <i class="fa fa-home"></i>&nbsp;Dashboard
+            </a>
+            <a class="navbar-item" href="laporan.html">
+              <i class="fa fa-file-text"></i>&nbsp;Laporan
+            </a>
+            <a class="navbar-item" href="diterima.html">
+              <i class="fa fa-check-square"></i>&nbsp;Diterima
+            </a>
+            <a class="navbar-item" href="baru.html">
+              <i class="fa fa-plus-circle"></i>&nbsp;Baru
+            </a>
+            <a class="navbar-item" href="sedang.html">
+              <i class="fa fa-spinner"></i>&nbsp;Sedang
+            </a>
+            <a class="navbar-item" href="tuntas.html">
+              <i class="fa fa-check-circle"></i>&nbsp;Tuntas
+            </a>
+            <a class="navbar-item" href="ditolak.html">
+              <i class="fa fa-times-circle"></i>&nbsp;Ditolak
+            </a>
+            <a class="navbar-item" href="rapat.html">
+              <i class="fa fa-users"></i>&nbsp;Rapat
+            </a>
+            <a class="navbar-item" href="kontak.html">
+              <i class="fa fa-address-book"></i>&nbsp;Kontak
+            </a>
+          </div>
+          <div class="navbar-end">
+            <a class="navbar-item open-modal" data-modal-id="#modal-login">
+              <i class="fa fa-sign-in"></i>&nbsp;Login
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="#">
+                <i class="fa fa-user"></i>&nbsp;Hi, Username
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item open-modal" data-modal-id="#modal-logout">
+                  Logout&nbsp;<i class="fa fa-sign-out"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-3">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <div class="card">
+                  <div class="card-content">
+                      <aside class="menu">
+                        <p class="menu-label">
+                          Bidang
+                        </p>
+                        <ul class="menu-list">
+                          <li><a>Teknologi Informasi</a></li>
+                          <li><a>Perhutanan</a></li>
+                          <li><a>Administratif/ Keuangan</a></li>
+                          <li><a>Riset</a></li>
+                          <li><a>Kesehatan</a></li>
+                        </ul>
+                      </aside>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-vertical is-9">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                  <ul>
+                    <li><a href="index.html"><span class="icon is-small"><i class="fa fa-home"></i></span><span>Beranda</span></a></li>
+                    <li class="is-active">
+                      <a href="#" aria-current="page">
+                        <span class="icon is-small">
+                          <i class="fa fa-tachometer" aria-hidden="true"></i>
+                        </span>
+                        <span>Dashboard</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="card">
+                  <div class="card-content">
+                    <script type="text/javascript">
+                      window.onload = function () {
+                      	var chart1 = new CanvasJS.Chart("chartDiterima",
+                      	{
+                      		title:{
+                      			text: "Diterima"
+                      		},
+                      		legend: {
+                      			maxWidth: 350,
+                      			itemWidth: 120
+                      		},
+                      		data: [
+                      		{
+                      			type: "pie",
+                      			showInLegend: true,
+                      			legendText: "{indexLabel}",
+                      			dataPoints: [
+                      				{ y: 59, indexLabel: "Teknologi Informasi" },
+                      				{ y: 12, indexLabel: "Perhutanan" },
+                      				{ y: 109, indexLabel: "Administratif/ Keuangan" },
+                      				{ y: 20, indexLabel: "Riset"},
+                      				{ y: 3, indexLabel: "Kesehatan" },
+                      			]
+                      		}
+                      		]
+                      	});
+                        var chart2 = new CanvasJS.Chart("chartDitolak",
+                      	{
+                      		title:{
+                      			text: "Ditolak"
+                      		},
+                      		legend: {
+                      			maxWidth: 350,
+                      			itemWidth: 120
+                      		},
+                      		data: [
+                      		{
+                      			type: "pie",
+                      			showInLegend: true,
+                      			legendText: "{indexLabel}",
+                      			dataPoints: [
+                      				{ y: 3, indexLabel: "Teknologi Informasi" },
+                      				{ y: 1, indexLabel: "Perhutanan" },
+                      				{ y: 4, indexLabel: "Administratif/ Keuangan" },
+                      				{ y: 11, indexLabel: "Riset"},
+                      				{ y: 3, indexLabel: "Kesehatan" },
+                      			]
+                      		}
+                      		]
+                      	});
+                      	chart1.render();
+                      	chart2.render();
+                      }
+                    </script>
+                    <div class="tile is-ancestor">
+                      <div class="tile is-6">
+                        <div id="chartDiterima" style="height: 300px; width: 100%;"></div>
+                      </div>
+                      <div class="tile is-6">
+                        <div id="chartDitolak" style="height: 300px; width: 100%;"></div>
+                      </div>
+                    </div>
+                    <table class="table is-striped is-narrow is-fullwidth">
+                      <thead>
+                        <tr class="is-selected">
+                          <th>Status Laporan</th>
+                          <th>Jumlah</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td><span class="tag is-danger is-medium">Ditolak</span></td>
+                          <td>10</td>
+                        </tr>
+                        <tr>
+                          <td><span class="tag is-success is-medium">Diterima (tuntas)</span></td>
+                          <td>77</td>
+                        </tr>
+                        <tr>
+                          <td><span class="tag is-primary is-medium">Diterima (sedang ditangani)</span></td>
+                          <td>81</td>
+                        </tr>
+                        <tr>
+                          <td><span class="tag is-link is-medium">Baru</span></td>
+                          <td>0</td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+                        <tr class="is-selected">
+                          <th><span class="tag is-warning is-medium">Total Laporan</span></th>
+                          <th>168</th>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-login">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title"><i class="fa fa-sign-in"></i> Form Login</p>
+              <button class="delete close-modal" data-modal-id="#modal-login" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+              <form class="" action="#" method="post">
+                <div class="field">
+                  <label class="label">Username</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" name="username" placeholder="Masukkan username" required="required">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                    <!-- <span class="icon is-small is-right">
+                      <i class="fa fa-check"></i>
+                    </span> -->
+                  </div>
+                  <!-- <p class="help is-success">This username is available</p> -->
+                </div>
+                <div class="field">
+                  <label class="label">Password</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="password" name="password" placeholder="Masukkan password" required="required">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                    <!-- <span class="icon is-small is-right">
+                      <i class="fa fa-check"></i>
+                    </span> -->
+                  </div>
+                  <!-- <p class="help is-success">This username is available</p> -->
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+              <button class="button is-success is-outlined" type="submit">Login</button>
+              <button class="button is-danger is-outlined close-modal" data-modal-id="#modal-login">Batal</button>
+            </footer>
+            </form>
+          </div>
+        </div>
+        <div class="modal" id="modal-logout">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title"><i class="fa fa-sign-out"></i> Kondirmasi Log-out</p>
+              <button class="delete close-modal" data-modal-id="#modal-logout" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+              <form class="" action="#" method="post">
+                <p class="subtitle is-4">Apakah Anda yakin akan log-out?</p>
+            </section>
+            <footer class="modal-card-foot">
+              <button class="button is-danger is-outlined" type="submit">Ya</button>
+              <button class="button is-primary is-outlined close-modal" data-modal-id="#modal-logout">Tidak</button>
+            </footer>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="content"> <!-- has-text-centered -->
+          <p>
+            &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> by Corporate/ Institute Name
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/canvasjs.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bulma.css">
+  </head>
+  <body>
+    <nav class="navbar is-info" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <!-- <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28"> -->
+          JUDUL
+        </a>
+        <div class="navbar-burger burger" data-target="navMenu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-start">
+            <a class="navbar-item" href="index.html">
+              <i class="fa fa-home"></i>&nbsp;Dashboard
+            </a>
+            <a class="navbar-item is-active" href="laporan.html">
+              <i class="fa fa-file-text"></i>&nbsp;Laporan
+            </a>
+            <a class="navbar-item" href="diterima.html">
+              <i class="fa fa-check-square"></i>&nbsp;Diterima
+            </a>
+            <a class="navbar-item" href="baru.html">
+              <i class="fa fa-plus-circle"></i>&nbsp;Baru
+            </a>
+            <a class="navbar-item" href="sedang.html">
+              <i class="fa fa-spinner"></i>&nbsp;Sedang
+            </a>
+            <a class="navbar-item" href="tuntas.html">
+              <i class="fa fa-check-circle"></i>&nbsp;Tuntas
+            </a>
+            <a class="navbar-item" href="ditolak.html">
+              <i class="fa fa-times-circle"></i>&nbsp;Ditolak
+            </a>
+            <a class="navbar-item" href="rapat.html">
+              <i class="fa fa-users"></i>&nbsp;Rapat
+            </a>
+            <a class="navbar-item" href="kontak.html">
+              <i class="fa fa-address-book"></i>&nbsp;Kontak
+            </a>
+          </div>
+          <div class="navbar-end">
+            <a class="navbar-item open-modal" data-modal-id="#modal-login">
+              <i class="fa fa-sign-in"></i>&nbsp;Login
+            </a>
+            <div class="navbar-item has-dropdown is-hoverable">
+              <a class="navbar-link" href="#">
+                <i class="fa fa-user"></i>&nbsp;Hi, Username
+              </a>
+              <div class="navbar-dropdown">
+                <a class="navbar-item open-modal" data-modal-id="#modal-logout">
+                  Logout&nbsp;<i class="fa fa-sign-out"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+    </nav>
+    <section class="section">
+      <div class="container">
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-3">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <div class="card">
+                  <div class="card-content">
+                      <aside class="menu">
+                        <p class="menu-label">
+                          Bidang
+                        </p>
+                        <ul class="menu-list">
+                          <li><a>Teknologi Informasi</a></li>
+                          <li><a>Perhutanan</a></li>
+                          <li><a>Administratif/ Keuangan</a></li>
+                          <li><a>Riset</a></li>
+                          <li><a>Kesehatan</a></li>
+                        </ul>
+                      </aside>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tile is-vertical is-9">
+            <div class="tile">
+              <div class="tile is-parent is-vertical">
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+                  <ul>
+                    <li><a href="index.html"><span class="icon is-small"><i class="fa fa-home"></i></span><span>Beranda</span></a></li>
+                    <li class="is-active">
+                      <a href="#" aria-current="page">
+                        <span class="icon is-small">
+                          <i class="fa fa-file-text" aria-hidden="true"></i>
+                        </span>
+                        <span>Laporan</span>
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+                <div class="card">
+                  <div class="card-content">
+                    <table class="table is-striped is-hoverable is-bordered is-narrow is-fullwidth" align="justify">
+                      <thead>
+                        <tr>
+                          <th>Permasalahan</th>
+                          <th>Pendapatan & langkah</th>
+                          <th>Target</th>
+                          <th>Status Laporan</th>
+                          <th>Post date</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td width="35%">
+                            <p align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                          </td>
+                          <td></td>
+                          <td>Selasa, 28 Nov 2017</td>
+                          <td><span class="tag is-info is-medium">Baru</span></td>
+                          <td>
+                            02/11/2017 - 17.07
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><p align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></td>
+                          <td></td>
+                          <td>Rabu, 29 Nov 2017</td>
+                          <td><span class="tag is-info is-medium">Baru</span></td>
+                          <td>
+                            03/11/2017 - 18.07
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><p align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></td>
+                          <td></td>
+                          <td>Kamis, 30 Nov 2017</td>
+                          <td><span class="tag is-warning is-medium">Lama</span></td>
+                          <td>
+                            02/11/2016 - 16.08
+                          </td>
+                        </tr>
+                        <tr>
+                          <td><p align="justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></td>
+                          <td></td>
+                          <td>Jum'at, 1 Des 2017</td>
+                          <td><span class="tag is-warning is-medium">Lama</span></td>
+                          <td>
+                            02/07/2015 - 12.07
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tfoot>
+
+                      </tfoot>
+                    </table>
+                    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+                      <a class="pagination-previous">Previous</a>
+                      <a class="pagination-next">Next page</a>
+                      <ul class="pagination-list">
+                        <li><a class="pagination-link" aria-label="Goto page 1">1</a></li>
+                        <li><span class="pagination-ellipsis">&hellip;</span></li>
+                        <li><a class="pagination-link" aria-label="Goto page 3">3</a></li>
+                        <li><a class="pagination-link is-current" aria-label="Page 4" aria-current="page">4</a></li>
+                        <li><a class="pagination-link" aria-label="Goto page 5">5</a></li>
+                        <li><span class="pagination-ellipsis">&hellip;</span></li>
+                        <li><a class="pagination-link" aria-label="Goto page 7">7</a></li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal" id="modal-login">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title"><i class="fa fa-sign-in"></i> Form Login</p>
+              <button class="delete close-modal" data-modal-id="#modal-login" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+              <form class="" action="#" method="post">
+                <div class="field">
+                  <label class="label">Username</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="text" name="username" placeholder="Masukkan username" required="required">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                    <!-- <span class="icon is-small is-right">
+                      <i class="fa fa-check"></i>
+                    </span> -->
+                  </div>
+                  <!-- <p class="help is-success">This username is available</p> -->
+                </div>
+                <div class="field">
+                  <label class="label">Password</label>
+                  <div class="control has-icons-left has-icons-right">
+                    <input class="input" type="password" name="password" placeholder="Masukkan password" required="required">
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                    <!-- <span class="icon is-small is-right">
+                      <i class="fa fa-check"></i>
+                    </span> -->
+                  </div>
+                  <!-- <p class="help is-success">This username is available</p> -->
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+              <button class="button is-success is-outlined" type="submit">Login</button>
+              <button class="button is-danger is-outlined close-modal" data-modal-id="#modal-login">Batal</button>
+            </footer>
+            </form>
+          </div>
+        </div>
+        <div class="modal" id="modal-logout">
+          <div class="modal-background"></div>
+          <div class="modal-card">
+            <header class="modal-card-head">
+              <p class="modal-card-title"><i class="fa fa-sign-out"></i> Kondirmasi Log-out</p>
+              <button class="delete close-modal" data-modal-id="#modal-logout" aria-label="close"></button>
+            </header>
+            <section class="modal-card-body">
+              <form class="" action="#" method="post">
+                <p class="subtitle is-4">Apakah Anda yakin akan log-out?</p>
+            </section>
+            <footer class="modal-card-foot">
+              <button class="button is-danger is-outlined" type="submit">Ya</button>
+              <button class="button is-primary is-outlined close-modal" data-modal-id="#modal-logout">Tidak</button>
+            </footer>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="content"> <!-- has-text-centered -->
+          <p>
+            &copy; <script type="text/javascript">document.write(new Date().getFullYear());</script> by Corporate/ Institute Name
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="js/canvasjs.min.js"></script>
+  </body>
+</html>
